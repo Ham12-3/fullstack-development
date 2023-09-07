@@ -84,8 +84,15 @@ grid-area: kira;
     align-items: center;
     gap: 1.5rem;
 }
+.quote {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 
 .left_component.daniel {
+    
+    position: relative;
     grid-area: daniel;
     /* width: 340px; */
     /* max-width: 550px; */
