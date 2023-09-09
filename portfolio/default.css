@@ -93,15 +93,14 @@ h6 {
   background-color: var(--secondaryColor);
   border: 1px solid var(--borderColor);
   border-radius: 5px 5px 0 0;
-  -webkit-box-shadow: 47px 10px 69px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 47px 10px 69px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 47px 10px 69px 0px rgba(0, 0, 0, 0.75);
+
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 3em 30em;
   grid-template-areas:
     "nav-wrapper nav-wrapper"
     "left-column right-column";
+    border-radius: 5px 5px 0 0;
 }
 .nav-wrapper {
   grid-area: nav-wrapper;
@@ -109,7 +108,19 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--mainColor);
 }
+#navigation {
+margin: 0;
+padding: 10px;
+
+}
+#navigation li {
+    display: inline-block;
+    margin: 0 5px;
+    
+}
+
 
 .dots-wrapper {
   display: flex;
@@ -130,9 +141,7 @@ h6 {
   width: 15px;
   border-radius: 50%;
   margin: 5px;
-  -webkit-box-shadow: 47px 10px 69px 0px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: 47px 10px 69px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 47px 10px 69px 0px rgba(0, 0, 0, 0.75);
+ 
 }
 .left-column {
   grid-area: left-column;
