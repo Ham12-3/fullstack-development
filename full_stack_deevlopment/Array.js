@@ -45,5 +45,15 @@ colors.length = 2;
 //  Looping in reverse
 
 for (let i = 5; i > 0; i--) {
-  console.log(i);
+  //   console.log(i);
 }
+
+// ForEach loop method
+const numbers = [1, 2, 3, 4, 5, 6];
+const squares = [];
+
+numbers.forEach(function (element, index, array) {
+  squares.push(element ** 2);
+});
+
+console.log("The total sum is; ", squares);
