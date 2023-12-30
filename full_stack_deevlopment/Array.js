@@ -49,7 +49,7 @@ for (let i = 5; i > 0; i--) {
 }
 
 // ForEach loop method
-const numbers = [1, 2, 3, 4, 5, 6];
+
 const squares = [];
 
 numbers.forEach(function (element, index, array) {
@@ -57,3 +57,15 @@ numbers.forEach(function (element, index, array) {
 });
 
 console.log("The total sum is; ", squares);
+
+const newArray = odlArray.map(function (element, index, array) {
+  //transformation code works here
+});
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const newNumberArr = numbers.map(function (num, index, array) {
+  return num * 2;
+});
+
+console.log(newNumberArr);
