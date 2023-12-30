@@ -58,14 +58,46 @@ numbers.forEach(function (element, index, array) {
 
 console.log("The total sum is; ", squares);
 
-const newArray = odlArray.map(function (element, index, array) {
+const newArrayMap = odlArray.map(function (element, index, array) {
   //transformation code works here
 });
-
-const numbers = [1, 2, 3, 4, 5, 6];
 
 const newNumberArr = numbers.map(function (num, index, array) {
   return num * 2;
 });
 
 console.log(newNumberArr);
+
+const words = ["apple", "pear", "mango"];
+
+const convertedWords = words.map(function (word, index, array) {
+  return word.toUpperCase();
+});
+console.log(convertedWords);
+
+// THE FILTER METHOD
+
+const newArrayFilter = oldArray.filter(function (element, index, array) {
+  // Filtering works here
+});
+
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const evenNumbers = numbers.filter(function (num) {
+  return num % 2 === 0;
+});
+
+console.log(evenNumbers);
+
+const gender = ["male", "female"];
+const maleArr = gender.filter(function (gender) {
+  return gender === "male";
+});
+// using filter to remove falsy values from an array
+
+const mixedArr2 = [0, 1, "apple", "", , null, "banana"];
+const truthyValue = mixedArr2.filter(function (value) {
+  return Boolean(value);
+});
+
+console.log(truthyValue);
