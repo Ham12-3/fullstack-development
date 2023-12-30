@@ -81,8 +81,6 @@ const newArrayFilter = oldArray.filter(function (element, index, array) {
   // Filtering works here
 });
 
-const numbers = [1, 2, 3, 4, 5, 6];
-
 const evenNumbers = numbers.filter(function (num) {
   return num % 2 === 0;
 });
@@ -101,3 +99,32 @@ const truthyValue = mixedArr2.filter(function (value) {
 });
 
 console.log(truthyValue);
+
+// ARRAY REDUCE METHOD
+const result = array.reduce(function (accumulator, element, index, array) {
+  // Logic to transform accumualtor based on the element
+});
+
+// Reducing using the reduce()
+const numbers = [1, 2, 3, 4, 5, 6];
+
+const sum = numbers.reduce(function (acc, current) {
+  console.log(acc);
+  // Perform our logic
+  return acc + current;
+}, 0);
+
+console.log(sum);
+
+// Using reduce to count the frequency of element in an arrray
+
+const fruit2 = ["apple", "banana", "mango", "apple"];
+
+const fruitCount = fruit2.reduce(function (acc, current) {
+  if (acc[cuurent]) {
+    acc[current] += 1;
+  } else {
+    acc[current] = 1;
+  }
+  return acc;
+}, {});
