@@ -128,3 +128,21 @@ const fruitCount = fruit2.reduce(function (acc, current) {
   }
   return acc;
 }, {});
+
+// Multi Dimensional Array
+
+// Creating a 2D array
+
+const matrix = [
+  [1, 2, 3],
+  [4, 5, 6],
+  [7, 8, 9],
+];
+
+// Accessing the elements
+
+console.log(matrix[0][0]);
+
+// Creating a 3D Array
+
+const threeDArray = [[[], [], []]];
