@@ -40,3 +40,35 @@ console.log(person["first name"]);
 
 objectname.newPropertyName = newValue;
 objectName["newPropertyName"] = newValue;
+
+// Add user role
+const userProfile = {
+  username: "Masynctech",
+  email: "masuntech@gmail.com",
+};
+
+// Add role property
+
+// userProfile.role = "admin";
+
+userProfile["role"] = "superadmin";
+
+console.log(userProfile);
+
+const book1 = {
+  title: "Harry Potter",
+};
+
+book1["publication year"] = 2023;
+
+// Adding nested properties
+
+const employee = {
+  name: "Bob",
+  department: "HR",
+};
+
+employee.address = {
+  city: "Kumasi",
+  state: "Ghana",
+};
