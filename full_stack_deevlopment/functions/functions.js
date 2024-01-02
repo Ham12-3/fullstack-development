@@ -97,3 +97,31 @@ greet("Emma", 30);
 const multiply = function (a, b = a * 2) {
   console.log(a * b);
 };
+// Return statement
+const add = function (a, b) {
+  const result = a + b;
+  return result;
+};
+
+const addResult = add(2, 2);
+function isEven(num) {
+  if (num % 2 === 0) {
+    return "It is an even number";
+  } else {
+    return "It is not an even number";
+  }
+}
+
+// Function Scope
+function showLocalVariable() {
+  const localVar = "I am a local varable";
+}
+
+function outerFn() {
+  const outerVar = "I am an outer variable";
+  console.log(outerVar);
+
+  function innerFn() {
+    const innerVar = "I am an inner variable";
+  }
+}
