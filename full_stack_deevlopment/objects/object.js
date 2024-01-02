@@ -72,3 +72,5 @@ employee.address = {
   city: "Kumasi",
   state: "Ghana",
 };
+
+// Function declaration
