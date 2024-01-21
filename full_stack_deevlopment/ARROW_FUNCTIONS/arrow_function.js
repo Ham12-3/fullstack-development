@@ -64,7 +64,7 @@ const numbers = [1, 2, 3, 4];
 
 const [first, second, third, fourth] = numbers;
 
-const user = { name: "Masynctech", age: 10, email: "support@masynctech.com" };
+const user1 = { name: "Masynctech", age: 10, email: "support@masynctech.com" };
 
 function greet2(userObj) {
   console.log(`Hello, ${userObj.name}, your age is ${userObj.age}`);
@@ -237,3 +237,77 @@ cart.forEach((item) => {
 });
 
 // Using map method
+
+// -----
+// Iterate through arrays using map
+
+// Initial data
+
+const shoppingCart = [
+  { name: "Laptop", price: 1000, qty: 1 },
+  { name: "Phone", price: 500, qty: 2 },
+  { name: "TV", price: 1500, qty: 1 },
+  { name: "Headphones", price: 100, qty: 3 },
+];
+
+//ADD 10% discount
+
+const discountedCart = shoppingCart.map((product) => {
+  return {
+    name: product.name,
+    price: product.price * 0.9,
+  };
+});
+
+console.log(discountedCart);
+
+// get all the product names only
+
+const productNamesOnly = shoppingCart.map((product) => {
+  return {
+    name: product.name,
+  };
+});
+
+// Using filter on arrays of objects
+
+const user = [
+  {
+    id: 1,
+    isActive: false,
+    name: "Bob",
+  },
+  {
+    id: 2,
+    isActive: true,
+    name: "Emmanuel",
+  },
+  {
+    id: 3,
+    isActive: false,
+    name: "Alice",
+  },
+];
+
+// filter out active users
+
+const activeUsers = users.filter((user) => {
+  return user.isActive === true;
+});
+
+console.log(activeUsers);
+console.log(user);
+
+// transactions above a certain amount
+const transactions = [
+  { id: 1, amount: 50 },
+  { id: 2, amount: 150 },
+
+  { id: 3, amount: 200 },
+];
+
+const largeTransactions = transactions.filter(
+  (transaction) => transaction.amount > 100
+);
+
+console.log(largeTransactions);
