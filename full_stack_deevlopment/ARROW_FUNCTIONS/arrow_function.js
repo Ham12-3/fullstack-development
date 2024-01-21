@@ -157,10 +157,83 @@ const updateStudentGrade = (id, newGrade) => {
     return student.id === id;
   });
   if (studentFound) {
-    studentFound.grade = "F";
+    studentFound.grade = newGrade;
   } else {
     console.log("Student not found");
   }
 };
 
+updateStudentGrade(2, newGrade);
+
 // Upgrade a student
+// Array-Object hybrids
+
+// Scenario: managing a todo list
+
+// Here, we'll create a simple todolist object that has a task array property
+
+const todoLists = {
+  title: "Todo List Application",
+  tasks: [
+    { id: 1, description: "Buy Groceries", completed: false },
+    { id: 2, description: "Go to Gym", completed: true },
+    { id: 3, description: "Buy Groceries", completed: false },
+  ],
+};
+
+console.log(todoLists);
+
+const allTasks = todoLists.tasks;
+
+const addTask = (description) => {
+  // get new id
+  const newId = todoLists.tasks.length + 1;
+  const newTask = {
+    id: newId,
+    completed: false,
+    description: description,
+  };
+
+  // Push the new task into the original task
+  todoLists.tasks.push(newTask);
+};
+
+// call fn
+
+addTask("Programming");
+
+//
+const markAsCompleted = (id) => {
+  // find the task
+  const foundTask = todoLists.tasks.find((task) => task.id === id);
+  if (foundTask) {
+    foundTask.completed = true;
+  } else {
+    console.log("Task not found");
+  }
+};
+
+markAsCompleted(1);
+
+// ForEach
+
+// ---
+// Iterate through arrays using the forEach()
+
+// Basic Example
+
+// Initial data
+const cart = [
+  { name: "laptop", price: 1000, qty: 1 },
+  { name: "Phone", price: 500, qty: 2 },
+  { name: "TV", price: 1500, qty: 1 },
+  { name: "Headphones", price: 100, qty: 3 },
+];
+// Calculate the total cost of the items in the cart
+let totalCost = 0;
+cart.forEach((item) => {
+  // Sum all the product prices
+  totalCost += item.price * item.qty;
+});
+
+// Using map method
