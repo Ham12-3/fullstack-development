@@ -375,3 +375,11 @@ const indexToMove = playlist.findIndex((song) => song.id === "1");
 if (indexToMove !== -1) {
   const [songToMove] = playlist.splice(indexToMove, 1);
 }
+
+// Insert new song
+
+const newSong = { id: "s5", title: "Song 5", artist: "Artist E" };
+
+playlist.splice(1, 0, newSong);
+
+console.log(playlist);
