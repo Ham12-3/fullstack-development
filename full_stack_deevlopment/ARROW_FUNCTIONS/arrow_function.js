@@ -337,12 +337,41 @@ const usersArr = [
 // Remove inactive user
 // find the index of the user to be removed
 
-const indexToRemove = usersArr.findIndex((user) => {
-  return user.id === 1 && !user.isActive;
-});
+// const indexToRemove = usersArr.findIndex((user) => {
+//   return user.id === 1 && !user.isActive;
+// });
 
 // Using splice
 
-if (indexToRemove !== -1) {
-  usersArr.splice(indexToRemove, 1);
+// if (indexToRemove !== -1) {
+//   usersArr.splice(indexToRemove, 1);
+// }
+
+// managing playlists
+
+const playlist = [
+  { id: 1, title: "Song 1", artist: "Artist A" },
+  { id: 2, title: "Song 2", artist: "Artist B" },
+  { id: 3, title: "Song 3", artist: "Artist C" },
+];
+
+// remove a song
+
+// const songIndexToRemove = playlist.findIndex(function (song) {
+//   return song.id === "1";
+// });
+
+// console.log(songIndexToRemove);
+
+// // Remove the song using the splice
+// if (songIndexToRemove !== -1) {
+//   playlist.splice(songIndexToRemove, 1);
+// }
+
+// Move a song of id of s1 to third position
+
+const indexToMove = playlist.findIndex((song) => song.id === "1");
+
+if (indexToMove !== -1) {
+  const [songToMove] = playlist.splice(indexToMove, 1);
 }
