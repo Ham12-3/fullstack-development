@@ -311,3 +311,38 @@ const largeTransactions = transactions.filter(
 );
 
 console.log(largeTransactions);
+
+// Transformation and manipulations using splice()
+
+// Remove inactive users
+
+const usersArr = [
+  {
+    id: 1,
+    isActive: false,
+    name: "Bob",
+  },
+  {
+    id: 2,
+    isActive: true,
+    name: "Emmanuel",
+  },
+  {
+    id: 3,
+    isActive: false,
+    name: "Alice",
+  },
+];
+
+// Remove inactive user
+// find the index of the user to be removed
+
+const indexToRemove = usersArr.findIndex((user) => {
+  return user.id === 1 && !user.isActive;
+});
+
+// Using splice
+
+if (indexToRemove !== -1) {
+  usersArr.splice(indexToRemove, 1);
+}
