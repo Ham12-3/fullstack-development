@@ -22,3 +22,15 @@ const conferenceDateEl = document.getElementById("conferenceDate");
 
 const locationTitleEl = document.getElementById("locationTitle");
 const conferenceLocationEl = document.getElementById("conferenceLocation");
+
+const fictionBooksEl = document.getElementsByClassName("fiction");
+
+const firstProductCardEl = document.querySelector(".product-card");
+
+console.log(firstProductCardEl);
+
+const highestRatingEl = document.querySelector("[data-rating ='4.8']");
+
+// Get the first laptop category product
+
+const laptopEl = document.querySelector("[data-category='laptop']");
