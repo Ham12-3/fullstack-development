@@ -52,3 +52,18 @@ const productNames = Array.from(productNameEls);
 productNames.map((product) => {
   console.log(product);
 });
+
+const laptopPricesEl = document.querySelectorAll('[data-category="laptop"]');
+
+laptopPricesEl.forEach((el) => {
+  console.log(el);
+});
+
+// Select all products with a rating of 4.5 and above
+const highestRatingsEl = document.querySelectorAll(
+  '[data-rating="4.7"],[data-rating=4.8]'
+);
+
+highestRatingEl.forEach((el) => {
+  console.log(el.innerHTML);
+});
