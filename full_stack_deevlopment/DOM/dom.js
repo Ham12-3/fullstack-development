@@ -34,3 +34,21 @@ const highestRatingEl = document.querySelector("[data-rating ='4.8']");
 // Get the first laptop category product
 
 const laptopEl = document.querySelector("[data-category='laptop']");
+
+// Selecting an id
+
+const dashboardElement = document.querySelector("#dashboard");
+console.log(dashboardElement);
+
+// Using querySelectorAll
+
+// Select all prouct cards
+
+const prtoductCardEls = document.querySelectorAll(".product-card");
+const productNameEls = document.querySelectorAll(".product-name");
+
+const productNames = Array.from(productNameEls);
+
+productNames.map((product) => {
+  console.log(product);
+});
