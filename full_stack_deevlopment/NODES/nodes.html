@@ -1,19 +1,29 @@
+
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div id="parent">
-<!-- This is a comment node  -->
-Some text here
-<span>Span Text</span>
-<p>paragraph text</p>
-    </div>
+<html>
+  <head>
+    <title>User Registration Form</title>
+  </head>
+  <body>
+    <form id="userForm">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" />
 
+      <label for="email">Email:</label>
+      <input type="email" name="email" id="email" />
 
-    <script src="nodes.js"></script>
-</body>
+      <!-- Multiple input fields with the same name attribute for language proficiency -->
+      <label>Language Proficiency:</label>
+      <input type="radio" name="languageProficiency" value="Beginner" />
+      Beginner
+      <input type="radio" name="languageProficiency" value="Intermediate" />
+      Intermediate
+      <input type="radio" name="languageProficiency" value="Advanced" />
+      Advanced
+    </form>
+
+    <button onclick="collectData()">Submit</button>
+
+    <script src="script.js"></script>
+  </body>
 </html>

@@ -1,7 +1,14 @@
-// Fetch the element with the id of parent 
-
-const parentEl = document.querySelector("#parent")
 
 
+function collectData() {
+    const languageProficiencyEls= document.getElementsByName("languageProficiency")
 
-parentEl.childNodes.forEach((node)=>console.log(node))
+
+    console.log(languageProficiencyEls)
+    
+    for(let i= 0; i<languageProficiencyEls.length;i++)  {
+        if(languageProficiencyEls[i].checked) {
+            console.log(`Selected language is: ${languageProficiencyEls[i].value}`)
+        }
+    }
+}
