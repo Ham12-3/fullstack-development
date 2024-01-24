@@ -40,3 +40,32 @@ const firstChildEl = parent.firstChild
 const lastChildEl = parent.lastChild
 
 console.log(firstChildEl)
+
+const firstElementChild = parentEl.firstElementChild
+const lastElementChild = parentEl/lastElementChild
+
+
+console.log(firstElementChild)
+
+console.log(lastElementChild)
+
+
+// Using Data Attributes 
+
+// using getAttributes and setAttributes 
+
+const userCard = document.getElementById('userCard')
+
+const userId = userCard.getAttribute("data-user-id")
+
+const userRole = userCard.getAttribute("data-user-role")
+
+// Modifying data attributes 
+
+userCard.setAttribute("data-user-role","super-admin")
+userCard.setAttribute("data-user-position","Engineer")
+
+// Using the datasets 
+const userId2 = userCard.dataset.userId
+const userRole2 = userCard.dataset.userRole
+
