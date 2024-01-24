@@ -158,3 +158,13 @@ if(nextElementEl && nextElementEl.nodeType=== 3) {
     nextElementEl.textContent="changed text"
 }
 })
+
+// Using previous element sibling 
+
+const cherryEl =- document.getElementById("cherry")
+
+// Select the previous sibling element of cherry (Should be banana) 
+
+const previousFruitEl = cherryEl.previousElementSibling
+
+const nextFruitEl = cherryEl.nextElementSibling
