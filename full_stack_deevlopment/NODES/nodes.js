@@ -133,3 +133,28 @@ if(text1El.nodeType === 3) {
 if(text2El.nodeType===3) {
     text2El.textContent ="text 2 has just been updated"
 }
+
+// Using nextSibling 
+
+// Get the container element 
+
+const containerEl = document.getElementById("container")
+
+// Get all the button within the container
+
+
+const buttonEl = document.querySelectorAll("button")
+
+console.log(buttonEl)
+
+// Loop through each button and change the text of its sibling 
+
+buttonEl.forEach((button)=> {
+const nextElementEl = button.nextSibling
+// Check out the nest sibling 
+
+console.log(nextElementEl)
+if(nextElementEl && nextElementEl.nodeType=== 3) {
+    nextElementEl.textContent="changed text"
+}
+})
