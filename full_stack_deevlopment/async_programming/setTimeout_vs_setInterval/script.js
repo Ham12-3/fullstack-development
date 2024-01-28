@@ -32,3 +32,29 @@ const intervalId = setInterval(() => {
 if (counter >= 5) {
   clearInterval(intervalId);
 }
+
+// ____Create a blocking code___________
+
+console.log("started Blocking Operations");
+
+// Create a blocking code 
+
+for(let i=0;i < 1e9;1++) {
+    // Simulate some operations 
+    console.log(i)
+}
+
+console.log("Finished Blocking Operations")
+
+
+// ______Non Blocking Operations_______
+
+console.log('====================================');
+console.log("Starting non Blocking Operations");
+console.log('====================================');
+
+setTimeout(()=> {
+    console.log("Executing delays");
+}, 4000)
+
+console.log("Finished non Blocking Operations")
