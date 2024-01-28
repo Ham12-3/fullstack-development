@@ -63,3 +63,5 @@ function removeAlert() {
 const removeButtonEl = document.getElementById("removeButton");
 
 removeButtonEl.addEventListener("click", removeAlert);
+
+// Event flow | Bubbling ,capturing ,target
