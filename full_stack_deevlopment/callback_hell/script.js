@@ -50,6 +50,9 @@ const postComments = {
 
 const fetchUserData = (userI, callback) => {
   console.log("Fetching user data");
+  setTimeout(() => {
+    callback(userData);
+  }, 1000);
 };
 
 // Fetch the user posts
@@ -57,6 +60,52 @@ const fetchUserPost = (userId, callback) => {
   console.log("Fetching user posts....");
 
   setTimeout(() => {
-    callback(usersPosts);
+    callback(userPosts);
   }, 1000);
 };
+
+// Fetch post comments
+
+const fetchPostComments = (postId, callback) => {
+  console.log("Fetching posts  comments...");
+  setTimeout(() => {
+    callback(postComments[postId]);
+  }, 1000);
+};
+
+// initiate the process
+
+fetchUserData(1, function (userData) {
+  console.log("User data", userData);
+  fetchUserPost(userData.id, function (userPosts) {
+    console.log("user posts", userPosts);
+
+    userPosts.forEach(function (post) {
+      console.log("Post", post);
+      fetchPostComments(post.id, function (comments) {
+        console.log("Comments", comments);
+      });
+    });
+  });
+});
+
+// Simple calc with errors
+const divideNumbers = (dividend, divisor, callback) => {
+  setTimeout(() => {
+    if (divisor === 0) {
+      callback(new Error("Cannot divide by zero"), null);
+    } else {
+      callback(null, dividend / divisor);
+    }
+  }, 1000);
+};
+
+divideNumbers(10, 2, function (error, result) {
+  if (error) {
+    console.log("====================================");
+    console.log("Error:", error.message);
+    console.log("====================================");
+  } else {
+    console.log("Result", result);
+  }
+});
