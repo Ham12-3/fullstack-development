@@ -6,6 +6,7 @@ if (theme == null) {
   setTheme(theme);
 }
 
+
 let themeDots = document.getElementsByClassName("theme-dot");
 
 for (var i = 0; themeDots.length > i; i++) {
@@ -21,6 +22,7 @@ function setTheme(mode) {
   if (mode == "blue") {
     document.getElementById("theme-style").href = "blue.css";
   }
+  
 
   if (mode == "green") {
     document.getElementById("theme-style").href = "green.css";

@@ -59,4 +59,6 @@ const handleOutcome = async () => {
   }
 };
 
-handleOutcome();
+const user = handleOutcome(); // Success or failed
+
+//  Async await with fetch
