@@ -59,3 +59,11 @@ if (process.env.APP_ENV === "production") {
 }
 
 // modules and require in Node.js : https://nodejs.org/api/modules.html
+
+// console.log(utils("Alice"));
+
+const { add, subtract } = require("./utils");
+
+console.log(add(2, 3));
+
+console.log(subtract(5, 3));
