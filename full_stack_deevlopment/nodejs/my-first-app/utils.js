@@ -23,3 +23,7 @@ module.exports = {
   add,
   subtract,
 };
+
+// Default Export in Node.js
+// Name Export in Node.js
+// Mixed Export (Default and Named Export in Node.js)
