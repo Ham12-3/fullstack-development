@@ -6,28 +6,39 @@ const PORT = 8082;
 
 app.use(express.static(path.join(__dirname, "public")));
 
+app.set("views engine", "ejs");
 // Render Home page/route
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/views", "home.html"));
+  res.render("home.ejs");
 });
 
 // Render About page/route
 
 app.get("/about", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/views", "about.html"));
+  res.render("about.ejs");
 });
 
 // Render Contact page/route
 
 app.get("/contact", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/views", "contact.html"));
+  res.render("contact.ejs");
 });
 
 // Render gallery page/route
 
 app.get("/gallery", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/views", "gallery.html"));
+  res.render("gallery.ejs");
+});
+
+// render userdata  to page/route
+app.get("/user", (req, res) => {
+  res.render("userData.ejs", {
+    name: "John Doe",
+    age: 25,
+    isPremiumUser: true,
+    email: "johndoe@gmail.com",
+  });
 });
 // Start the server
 
