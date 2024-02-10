@@ -13,5 +13,13 @@
     <h1>Welcome, <%=name%></h1>
     <p>email: <%=email%></p>
     <p>Age: <%=age%></p>
+    <%if (isPremiumUser) {%>
+
+    <p>Thank you for being a premium user</p>
+
+    <%}%>
+
+    <!-- Conditional rendering:  -->
+    <p><%=(isLogin)? "Welcome you are logged In": "Login please" %></p>
   </body>
 </html>
