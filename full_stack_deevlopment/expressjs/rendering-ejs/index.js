@@ -33,12 +33,13 @@ app.get("/gallery", (req, res) => {
 
 // render userdata  to page/route
 app.get("/user", (req, res) => {
-  res.render("userData.ejs", {
+  const userData = {
     name: "John Doe",
     age: 25,
     isPremiumUser: true,
     email: "johndoe@gmail.com",
-  });
+  };
+  res.render("userData.ejs", userData);
 });
 // Start the server
 
