@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rendering Assets with Express.js</title>
-    <link rel="stylesheet" href="../css/home.css" />
-  </head>
 
-  <body>
-    <header>
-      <h1>Rendering Assets with Express.js</h1>
-      <nav>
-        <a href="/gallery">Gallery</a>
-        <a href="/about">About Us</a>
-        <a href="/contact">Contact</a>
-      </nav>
-    </header>
-
+<%- include('./partials/header.ejs')%>
     <main>
       <section>
         <h2>Overview</h2>
@@ -39,6 +22,7 @@
           the <code>express.static</code> middleware, enhancing the performance
           and styling of your web pages.
         </p>
+        
       </section>
     </main>
 
