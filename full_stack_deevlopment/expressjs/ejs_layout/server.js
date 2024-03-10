@@ -35,6 +35,17 @@ app.get("/gallery", (req, res) => {
   res.render("gallery.ejs");
 });
 
+// NOT found or 404 page/route
+
+app.use((req, res, next) => {
+  const error = new Error("Page not found");
+  next(error);
+});
+
+app.use((error, req, res, next) => {
+  console.log(error.message);
+});
+
 // render userdata  to page/route
 
 // Start the server
