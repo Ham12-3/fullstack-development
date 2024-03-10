@@ -27,6 +27,37 @@ async function connect() {
     // 2. Connect to the server using the client object
     await client.connect();
     console.log("Connected to the server");
+    // 1. Database name is studentDatabase
+    // 2. Collections are students and teachers
+    // 3. Documents are the data in the collection
+    const database = client.db("abdulDatabase");
+
+    const students = database.collection("students");
+
+    // 3. Perform the CRUD operations using the insertOne method
+    // const result = await students.insertOne({
+    //   name: "Abdulhamid",
+    //   age: 21,
+    //   course: "Computer Science",
+    // });
+
+    const results = await students.insertMany([
+      {
+        name: "Abdulhamid",
+        age: 21,
+        course: "Computer Science",
+      },
+      {
+        name: "Abdulhamid",
+        age: 21,
+        course: "Computer Science",
+      },
+      {
+        name: "Abdulhamid",
+        age: 21,
+        course: "Computer Science",
+      },
+    ]);
   } catch (error) {
     console.error("Error connecting to the server", error);
   }
