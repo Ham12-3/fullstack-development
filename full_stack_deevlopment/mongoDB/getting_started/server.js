@@ -6,12 +6,16 @@ const app = express();
 const { MongoClient, ServerApiVersion } = require("mongodb");
 const PORT = 5000;
 
+// dotenv confguration to use environment variables
+require("dotenv").config();
 // connect to mongodb server using MongoClient
 
+// mongodb+srv://abdulhamid:omolara@cluster0.y0p7r3e.mongodb.net/studentDatabase
+
 // 1. Create the Client object using MongoClient
-const client = new MongoClient("mongodb://localhost:27017", {
+const client = new MongoClient(process.env.MONGODB_DATABASE_NAME, {
   serverApi: {
-    version: "ServerApiVersion.v1",
+    version: ServerApiVersion.v1,
     strict: true,
     deprecationErrors: true,
   },
