@@ -41,23 +41,33 @@ async function connect() {
     //   course: "Computer Science",
     // });
 
-    const results = await students.insertMany([
-      {
-        name: "Abdulhamid",
-        age: 21,
-        course: "Computer Science",
-      },
-      {
-        name: "Abdulhamid",
-        age: 21,
-        course: "Computer Science",
-      },
-      {
-        name: "Abdulhamid",
-        age: 21,
-        course: "Computer Science",
-      },
-    ]);
+    // const results = await students.insertMany([
+    //   {
+    //     name: "Abdulhamid",
+    //     age: 21,
+    //     course: "Computer Science",
+    //   },
+    //   {
+    //     name: "Abdulhamid",
+    //     age: 21,
+    //     course: "Computer Science",
+    //   },
+    //   {
+    //     name: "Abdulhamid",
+    //     age: 21,
+    //     course: "Computer Science",
+    //   },
+    // ]);
+
+    // const resultCursor = students.find();
+    // const results = await resultCursor.toArray();
+    // console.log(results);
+
+    const result = await students.findOne({
+      age: 21,
+    });
+
+    console.log(result);
   } catch (error) {
     console.error("Error connecting to the server", error);
   }
