@@ -30,36 +30,37 @@ async function connect() {
 
     const database = client.db("masynctech");
     const employees = database.collection("employees");
-    // const employeesDocs = [
-    //   {
-    //     name: "Abdulhamid",
-    //     age: 25,
-    //     department: "IT",
-    //   },
-    //   {
-    //     name: "Omolara",
-    //     age: 23,
-    //     department: "Admin",
-    //   },
-    //   {
-    //     name: "Aisha",
-    //     age: 20,
-    //     department: "HR",
-    //   },
-    //   {
-    //     name: "Taiwo",
-    //     age: 30,
+    const employeesDocs = [
+      {
+        name: "Abdulhamid",
+        age: 25,
+        department: "IT",
+      },
+      {
+        name: "Omolara",
+        age: 23,
+        department: "Admin",
+      },
+      {
+        name: "Aisha",
+        age: 20,
+        department: "HR",
+      },
+      {
+        name: "Taiwo",
+        age: 30,
 
-    //     department: "Finance",
-    //   },
-    // ];
+        department: "Finance",
+      },
+    ];
 
-    // const results = await employees.insertMany(employeesDocs);
-    // console.log(results);
+    const results = await employees.insertMany(employeesDocs);
+    console.log(results);
+    // logical operators in mongodb
 
-    // const employeesCursor = employees.find({ age: { $gte: 20,$lte:35 } });
-
-    // const results = await employeesCursor.toArray();
+    const query = {
+      $or: [{ age: { $lt: 25 } }, { department: "HR" }],
+    };
   } catch (error) {
     console.error("Error connecting to the server", error);
   }
