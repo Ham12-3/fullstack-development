@@ -93,18 +93,26 @@ async function connect() {
     //   }
     // );
 
-    const results = await students.findOneAndUpdate(
-      {
-        name: "Abdulhamid",
-      },
-      {
-        $set: {
-          age: 22,
-        },
-      }
-    );
+    // const results = await students.findOneAndUpdate(
+    //   {
+    //     name: "Abdulhamid",
+    //   },
+    //   {
+    //     $set: {
+    //       age: 22,
+    //     },
+    //   }
+    // );
 
-    console.log(results);
+    // console.log(results);
+
+    const result = await students.deleteOne({
+      name: "Abdulhamid",
+    });
+
+    await students.deleteMany({
+      name: "Abdulhamid",
+    });
   } catch (error) {
     console.error("Error connecting to the server", error);
   }
