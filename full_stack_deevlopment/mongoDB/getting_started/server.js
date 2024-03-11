@@ -63,11 +63,48 @@ async function connect() {
     // const results = await resultCursor.toArray();
     // console.log(results);
 
-    const result = await students.findOne({
-      age: 21,
-    });
+    // const result = await students.findOne({
+    //   age: 21,
+    // });
 
-    console.log(result);
+    // console.log(result);
+
+    // Upate operations using the updateOne method
+    // const result = await students.updateOne(
+    //   {
+    //     name: "Abdulhamid",
+    //   },
+    //   {
+    //     $set: {
+    //       age: 22,
+    //     },
+    //   }
+    // );
+
+    // await students.updateMany(
+    //   {
+    //     name: "Abdulhamid",
+    //   },
+    //   {
+    //     $set: {
+    //       age: 22,
+    //       course: "Mathematics",
+    //     },
+    //   }
+    // );
+
+    const results = await students.findOneAndUpdate(
+      {
+        name: "Abdulhamid",
+      },
+      {
+        $set: {
+          age: 22,
+        },
+      }
+    );
+
+    console.log(results);
   } catch (error) {
     console.error("Error connecting to the server", error);
   }
