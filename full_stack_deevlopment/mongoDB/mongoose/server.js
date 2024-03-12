@@ -152,6 +152,46 @@ const User = mongoose.model("User", userProfileSchema);
 //   .catch((error) => console.log(error));
 
 // User.findById("60f6f7f1f7c6c1b1f0f3e3f6");
+
+// const findUsers = async () => {
+//   try {
+//     const users = User.find().where("age").gte(27).sort("name").select("name");
+//     console.log(users);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// Updating document
+
+const updateDoc = async () => {
+  try {
+    const user = await User.findOneAndUpdate(
+      { name: "Mobolaji" },
+      { name: "Mobolaji", age: 26 },
+      { new: true }
+    );
+    console.log(user);
+  } catch (error) {
+    console.log(error);
+  }
+};
+updateDoc();
+
+// const updateById = async () => {
+//   try {
+//     const user = await User.findByIdAndUpdate(
+//       "60f6f7f1f7c6c1b1f0f3e3f6",
+//       { name: "Mobolaji", age: 26 },
+//       { new: true }
+//     );
+//     console.log(user);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+// updateById();
+
 // Start the sever
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
