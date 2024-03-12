@@ -58,87 +58,100 @@ const User = mongoose.model("User", userProfileSchema);
 // begin with the create document operation
 
 // save()
-const newUser = new User({
-  name: "Abdulhamid",
-  age: 25,
-  email: "mobolaji2309@gmail.com",
-  address: {
-    street: "No 10, Ojodu Berger",
-    city: "Lagos",
-    postCode: 100001,
-  },
-  customData: {
-    hobbies: ["coding", "reading", "gaming"],
-    favColor: "blue",
-  },
-});
+// const newUser = new User({
+//   name: "Abdulhamid",
+//   age: 25,
+//   email: "mobolaji2309@gmail.com",
+//   address: {
+//     street: "No 10, Ojodu Berger",
+//     city: "Lagos",
+//     postCode: 100001,
+//   },
+//   customData: {
+//     hobbies: ["coding", "reading", "gaming"],
+//     favColor: "blue",
+//   },
+// });
 
-newUser
-  .save()
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => console.log(error));
-// create()
+// newUser
+//   .save()
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => console.log(error));
+// // create()
 
-User.create({
-  name: "Mobolaji",
-  age: 25,
-  email: "bolade@yahoo.com",
-  address: {
-    street: "No 10, Ojodu Berger",
-    city: "Lagos",
-    postCode: 100001,
-  },
-  customData: {
-    hobbies: ["coding", "reading", "gaming"],
-    favColor: "blue",
-  },
-})
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => console.log(error));
+// User.create({
+//   name: "Mobolaji",
+//   age: 25,
+//   email: "bolade@yahoo.com",
+//   address: {
+//     street: "No 10, Ojodu Berger",
+//     city: "Lagos",
+//     postCode: 100001,
+//   },
+//   customData: {
+//     hobbies: ["coding", "reading", "gaming"],
+//     favColor: "blue",
+//   },
+// })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => console.log(error));
 
-// insertMany()
+// // insertMany()
 
-User.insertMany([
-  {
-    name: "Delere",
-    age: 39,
-    email: "omodele@gmail.com",
-    address: {
-      street: "No 10, Ojodu Berger",
-      city: "Lagos",
-      postCode: 100001,
-    },
-    customData: {
-      hobbies: ["coding", "reading", "gaming"],
-      favColor: "blue",
-    },
-  },
-  {
-    name: "Delere",
-    age: 39,
-    email: "dayo@gmail.com",
-    address: {
-      street: "No 10, Ojodu Berger",
-      city: "Lagos",
-      postCode: 100001,
-    },
-    customData: {
-      hobbies: ["coding", "reading", "gaming"],
-      favColor: "blue",
-    },
-  },
-])
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => console.log(error));
+// User.insertMany([
+//   {
+//     name: "Delere",
+//     age: 39,
+//     email: "omodele@gmail.com",
+//     address: {
+//       street: "No 10, Ojodu Berger",
+//       city: "Lagos",
+//       postCode: 100001,
+//     },
+//     customData: {
+//       hobbies: ["coding", "reading", "gaming"],
+//       favColor: "blue",
+//     },
+//   },
+//   {
+//     name: "Delere",
+//     age: 39,
+//     email: "dayo@gmail.com",
+//     address: {
+//       street: "No 10, Ojodu Berger",
+//       city: "Lagos",
+//       postCode: 100001,
+//     },
+//     customData: {
+//       hobbies: ["coding", "reading", "gaming"],
+//       favColor: "blue",
+//     },
+//   },
+// ])
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => console.log(error));
 
 // Read Operation
 
+// User.find()
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => console.log(error));
+
+// User.findOne({ name: "Mobolaji" })
+//   .then((data) => {
+//     console.log(data);
+//   })
+//   .catch((error) => console.log(error));
+
+// User.findById("60f6f7f1f7c6c1b1f0f3e3f6");
 // Start the sever
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
