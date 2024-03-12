@@ -287,6 +287,35 @@ updateDoc();
 //   }
 // };
 
+// delete documents 
+
+const deletDoc = async()=> {
+  try {
+    const user = await  findByIdAndDelete("60f6f7f1f7c6c1b1f0f3e3f6");
+    console.log(user);
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+deletDoc();
+
+// Delete using the deleteOne method 
+const deleteOne = async()=> {
+  try {
+    const user = await  deleteOne({name: "Mobolaji"});
+    console.log(user);
+
+  } catch (error) {
+    console.log(error);
+  }
+}
+
+// Delete using the deleteMany method 
+
+
+
 // Start the sever
 
 app.listen(PORT, () => {
