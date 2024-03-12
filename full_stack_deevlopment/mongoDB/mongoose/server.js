@@ -192,7 +192,103 @@ updateDoc();
 // };
 // updateById();
 
+// set and unset operator
+
+// const updateUsingSet = async () => {
+//   try {
+//     const user = await User.findOneAndUpdate(
+//       { name: "Mobolaji" },
+//       { $set: { "address.city": "Ibadan" } },
+//       { new: true }
+//     );
+//     console.log(user);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+// // unset operator
+// const updateUsingUnset = async () => {
+//   try {
+//     const user = await User.findOneAndUpdate(
+//       { name: "Mobolaji" },
+//       { $unset: { "address.city": "Ibadan" } },
+//       { new: true }
+//     );
+//     console.log(user);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+// // addToSet opaerator (push) and pull operator (remove)
+// const updateUsingAddToSet = async () => {
+//   try {
+//     const user = await User.findOneAndUpdate(
+//       { name: "Mobolaji" },
+//       { $addToSet: { "customData.hobbies": "singing" } },
+//       { new: true }
+//     );
+//     console.log(user);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+// const updateUsingPull = async () => {
+//   try {
+//     const user = await User.findOneAndUpdate(
+//       { name: "Mobolaji" },
+//       { $pull: { "customData.hobbies": "singing" } },
+//       { new: true }
+//     );
+//     console.log(user);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// // increment and multiplication operators
+
+// const updateUsingInc = async () => {
+//   try {
+//     const user = await User.findOneAndUpdate(
+//       { name: "Mobolaji" },
+//       { $inc: { age: 1 } },
+//       { new: true }
+//     );
+//     console.log(user);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+// const updateUsingMul = async () => {
+//   try {
+//     const user = await User.findOneAndUpdate(
+//       { name: "Mobolaji" },
+//       { $mul: { age: 2 } },
+//       { new: true }
+//     );
+//     console.log(user);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// // pop
+
+// const updateUsingPop = async () => {
+//   try {
+//     const user = await User.findOneAndUpdate(
+//       { name: "Mobolaji" },
+//       { $pop: { "customData.hobbies": -1 } },
+//       { new: true }
+//     );
+//     console.log(user);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
 // Start the sever
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
